@@ -1,0 +1,241 @@
+
+
+
+<div class="" *ngIf="loading">
+  <div class="preloader-wrapper big active">
+  <div class="spinner-layer spinner-blue-only">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div *ngIf="!loading">
+
+
+
+<div class="wrapper">
+
+  <div class="container category">
+    <h4>{{category}}</h4>
+  </div>
+
+
+
+
+
+          <div class="container">
+
+
+              <div class="row">
+                  <div class="col l3 col m6 col s12" *ngFor="let article of articles; let i=index">
+                      <!-- Vertical News Box -->
+                      <div *ngIf="i<2">
+                      <div class="news vertical z-depth-1">
+                          <!-- News Image -->
+                          <div class="news-image">
+                              <div class="source-box z-depth-2"> {{article.author}} </div>
+                          <div *ngIf="article.urlToImage != null ">     <img class="responsive-img" src="{{article.urlToImage}}" alt="news Image"> </div>
+                            <div *ngIf="article.urlToImage == null ">     <img class="responsive-img" src="http://cdn.pcwallart.com/images/cosmos-wallpaper-4.jpg" alt="news Image"> </div>
+                          </div>
+                          <!-- News Description -->
+                          <div class="news-description">
+                              <div class="news-time">
+                                  <i class="fa fa-clock-o"></i> {{article.publishedAt}}
+                              </div>
+                              <div class="news-title"><a href="{{article.url}} " target="_blank"> {{article.title}} </a></div>
+                              <div class="news-content"><p>{{article.description}} </p></div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col l6 col m12 col s12">
+                      <div class="z-depth-1">
+                          <!--  Horizontal News Box -->
+                          <div *ngFor="let article of articles; let i=index">
+                              <div *ngIf="i>2 && i<5">
+                          <div class="news horizontal no-border" >
+
+                              <div class="col l4 col m4 col s12 no-padding">
+                                  <!-- News Image -->
+                                  <div class="news-image">
+                                      <div class="source-box z-depth-2"> {{article.author}} </div>
+                                      <div *ngIf="article.urlToImage != null ">     <img class="responsive-img" src="{{article.urlToImage}}" alt="news Image"> </div>
+                                        <div *ngIf="article.urlToImage == null ">     <img class="responsive-img" src="http://cdn.pcwallart.com/images/cosmos-wallpaper-4.jpg" alt="news Image"> </div>
+                                  </div>
+                              </div>
+                              <div class="col l8 col m8 col s12 no-padding">
+                                  <!-- News Description -->
+                                  <div class="news-description">
+                                      <div class="news-time">
+                                          <i class="fa fa-clock-o"></i> 9 min ago
+                                      </div>
+                                      <div class="news-title"><a target="_blank" href="{{article.url}}">{{article.title}}</a></div>
+                                      <div class="news-content"><p> {{article.description}}</p></div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                          <!-- Horizontal News Box -->
+
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div *ngFor="let article of articles; let i=index">
+
+                    <div *ngIf="i>5 && i<10">
+
+                  <div class="col l3 col m6 col s12">
+                      <!--  Vertical News Box -->
+                      <div class="news vertical z-depth-1">
+                          <!-- News Image -->
+                          <div class="news-image">
+                              <div class="source-box z-depth-2"> {{article.author}} </div>
+                              <div *ngIf="article.urlToImage != null ">     <img class="responsive-img" src="{{article.urlToImage}}" alt="news Image"> </div>
+                                <div *ngIf="article.urlToImage == null ">     <img class="responsive-img" src="http://cdn.pcwallart.com/images/cosmos-wallpaper-4.jpg" alt="news Image"> </div>
+                          </div>
+                          <!-- News Description -->
+                          <div class="news-description">
+                              <div class="news-time">
+                                  <i class="fa fa-clock-o"></i> 9 min ago
+                              </div>
+                              <div class="news-title"><a target="_blank" href="{{article.url}}"> {{article.title}}</a></div>
+                              <div class="news-content"><p>{{article.description}}</p></div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+            </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="col l12 col m12 col s12">
+                      <!-- blockquote -->
+                      <div class="blockquote z-depth-1">
+                          <span>Hot News:</span> Nullam Quies ante. rhoncus augue pharetra sed. Mauris tincidunt, nunc vitae tristique porta, nisi arcu pulvinar enim, in pretium mi ex quis felis. Integer pharetra sit amet ligula sit amet porttitor. Praesent condimentum augue ut ornare tempor.
+                      </div>
+                  </div>
+              </div>
+
+
+
+              <div class="row">
+                  <div class="col l6 col m12 col s12">
+                      <div class="z-depth-1">
+                          <!-- Horizontal News Box -->
+                          <div *ngFor="let article of articles; let i=index">
+                              <div *ngIf="i>10  && i<13">
+                          <div class="news horizontal no-border" >
+
+                              <div class="col l4 col m4 col s12 no-padding">
+                                  <!-- News Image -->
+                                  <div class="news-image">
+                                    <div class="source-box z-depth-2"> {{article.author}} </div>
+                                    <div *ngIf="article.urlToImage != null ">     <img class="responsive-img" src="{{article.urlToImage}}" alt="news Image"> </div>
+                                      <div *ngIf="article.urlToImage == null ">     <img class="responsive-img" src="http://cdn.pcwallart.com/images/cosmos-wallpaper-4.jpg" alt="news Image"> </div>
+                                  </div>
+                              </div>
+                              <div class="col l8 col m8 col s12 no-padding">
+                                  <!-- News Description -->
+                                  <div class="news-description">
+                                      <div class="news-time">
+                                          <i class="fa fa-clock-o"></i> 9 min ago
+                                      </div>
+                                      <div class="news-title"><a target="_blank" href="{{article.url}}">{{article.title}}</a></div>
+                                      <div class="news-content"><p> {{article.description}}</p></div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                          <!-- Horizontal News Box -->
+
+                      </div>
+                  </div>
+                  <div *ngFor="let article of articles; let i=index">
+
+                      <div *ngIf="i>13 && i<16">
+
+                    <div class="col l3 col m6 col s12">
+                        <!--  Vertical News Box -->
+                        <div class="news vertical z-depth-1">
+                            <!-- News Image -->
+                            <div class="news-image">
+                                <div class="source-box z-depth-2"> {{article.author}} </div>
+                                <div *ngIf="article.urlToImage != null ">     <img class="responsive-img" src="{{article.urlToImage}}" alt="news Image"> </div>
+                                  <div *ngIf="article.urlToImage == null ">     <img class="responsive-img" src="http://cdn.pcwallart.com/images/cosmos-wallpaper-4.jpg" alt="news Image"> </div>
+                            </div>
+                            <!-- News Description -->
+                            <div class="news-description">
+                                <div class="news-time">
+                                    <i class="fa fa-clock-o"></i> 9 min ago
+                                </div>
+                                <div class="news-title"><a target="_blank" href="{{article.url}}"> {{article.title}}</a></div>
+                                <div class="news-content"><p>{{article.description}}</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+
+              </div>
+              <div class="row">
+                <div *ngFor="let article of articles; let i=index">
+
+                    <div *ngIf="i>16">
+
+                  <div class="col l3 col m6 col s12">
+                      <!--  Vertical News Box -->
+                      <div class="news vertical z-depth-1">
+                          <!-- News Image -->
+                          <div class="news-image">
+                              <div class="source-box z-depth-2"> {{article.author}} </div>
+                              <div *ngIf="article.urlToImage != null ">     <img class="responsive-img" src="{{article.urlToImage}}" alt="news Image"> </div>
+                                <div *ngIf="article.urlToImage == null ">     <img class="responsive-img" src="http://cdn.pcwallart.com/images/cosmos-wallpaper-4.jpg" alt="news Image"> </div>
+                          </div>
+                          <!-- News Description -->
+                          <div class="news-description">
+                              <div class="news-time">
+                                  <i class="fa fa-clock-o"></i> 9 min ago
+                              </div>
+                              <div class="news-title"><a target="_blank" href="{{article.url}}"> {{article.title}}</a></div>
+                              <div class="news-content"><p>{{article.description}}</p></div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+            </div>
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+      </div>
+    </div>

@@ -1,0 +1,32 @@
+
+
+<ul id="slide-out" class="side-nav full" >
+    <li class="logo-title"><a href="javascript:void(0);">Cosmic News</a></li>
+
+    <!-- Dropdown Menu -->
+    <li class="waves-effect"><a [routerLink]="['/' ]"  ><i class="fa fa-home"></i>Home</a></li>
+    <li class="dropdown-menu">
+            <ul class="collapsible" data-collapsible="expandable">
+            <li class="" >
+                <div class="collapsible-header waves-effect waves "><i class="fa fa-sort-amount-asc"></i> Categories <i class="fa fa-angle-right"></i></div>
+                <div style="display: none;" class="collapsible-body">
+                    <ul >
+                        <li class="waves-effect waves " *ngFor="let category of categories"><a [routerLink]="['/category', category]"><i class="fa fa-angle-right"></i> {{category}}</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="">
+                <div class="collapsible-header waves-effect waves "><i class="fa fa-globe"></i> Sites<i class="fa fa-angle-right"></i></div>
+                <div style="display: none;" class="collapsible-body">
+                    <ul>
+                        <li class="waves-effect"  *ngFor="let source of sources"><a  [routerLink]="['/source', source.id]" ><i class="fa fa-angle-right"></i>{{source.name}}</a></li>
+
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </li>
+
+</ul>
